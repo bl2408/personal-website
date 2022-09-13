@@ -1,12 +1,26 @@
 :root{
 
 }
+
+@font-face {
+  /* font-family: AnonPro-Bold;
+    src: url(../fonts/AnonymousPro/AnonymousPro-Bold.ttf);*/
+
+    font-family: AnonPro-Reg;
+    src: url(../fonts/AnonymousPro/AnonymousPro-Regular.ttf);
+    
+   /* font-family: OxygenMono;
+    src: url(../fonts/OxygenMono/OxygenMono-Regular.ttf);*/
+}
 html, body{
+    font-family: AnonPro-Reg;
+    font-size: 67.5%;
     margin: 0;
     padding: 0;
     width: 100%;
     /* height: 100%; */
     height: 1000px;
+    scroll-behavior: smooth;
 }
 
 
@@ -15,6 +29,8 @@ html, body{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
+    min-width: 320px;
     width: 100vw;
     max-height: 80px;
     box-sizing: border-box;
@@ -25,6 +41,10 @@ html, body{
 
     overflow: hidden;
     transition: max-height 0.1s ease-in-out;
+
+    font-size: 1.6rem;
+
+    background-color: grey;
 }
 
 #nav-main-top > div{
@@ -72,6 +92,34 @@ html, body{
     #nav-main-top-ham{
         display: none;
     }
+}
+
+main{
+    min-width: 320px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 80px; /* NAV HEI */
+}
+
+main > section{
+    scroll-margin-top: 80px; /* NAV HEI */
+    border: solid 1px green;
+    height:calc(100vh - 80px);
+    width: 100%;
+    max-width: 1200px;
+}
+
+#sec-about{
+    background-color: red;
+}
+#sec-skills{
+    background-color: blue;
+}
+#sec-work{
+    background-color: green;
 }
 
 
