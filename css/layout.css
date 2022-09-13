@@ -10,6 +10,9 @@
     --baseFontSize: 1.6rem;
 }
 
+.highlight1{
+    color: var(--fontColHighlight1);
+}
 .highlight2{
     color: var(--fontColHighlight2);
 }
@@ -70,7 +73,6 @@ html, body{
     align-items: center;
 }
 
-
 #nav-main-top{
     position: fixed;
     top: 0;
@@ -100,10 +102,21 @@ html, body{
     max-height: 60vh;
     overflow-y: auto;
 }
+
 #nav-main-top-ham{
     cursor: pointer;
+}
+#nav-main-top > * {
     user-select: none;
 	-webkit-tap-highlight-color: transparent;
+}
+
+#nav-main-top a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+#nav-main-top a:active, #nav-main-top a:visited{
+    color: var(--fontColHighlight2);
 }
 
 .ham-open{
@@ -118,9 +131,10 @@ html, body{
         grid-column: 1 / span 3;
         grid-row: 2;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        text-align: center;
         gap: 10px;
-        padding: 30px 0;
+        padding: 20px 0 35px 0;
     }
     #nav-main-top-menu > *{
         padding: 12px;
@@ -137,8 +151,14 @@ html, body{
         grid-column: span 2;
         flex-direction: row;
         justify-content: end;
-        align-items: center;
+        align-items: stretch;
         gap: 2%;
+    }
+    #nav-main-top-menu > *{
+        display: flex;
+        align-items: center;
+        padding: 5px 12px;
+        box-sizing: border-box;
     }
     #nav-main-top-menu > :last-child{
         margin-right:20px;
@@ -205,6 +225,8 @@ main > section{
 #sec-about > div:last-child{
     font-size: 1.8rem;
 }
+
+
 
 @keyframes cursor-blink {
     0% {
