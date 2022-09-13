@@ -10,14 +10,15 @@
     <script src="./js/nav.js"></script>
 </head>
 <body>
+    <div id="overlay"></div>
     <nav id="nav-main-top">
-        <div id="nav-main-top-logo">Logo</div>
+        <div id="nav-main-top-logo">BL</div>
         <div id="nav-main-top-menu">
-            <div><a href="#/" onclick="BLScroll('#sec-about');">About</a></div>
-            <div><a href="#/" onclick="BLScroll('#sec-skills');">Skills</a></div>
-            <div><a href="#/" onclick="BLScroll('#sec-work');">Work</a></div>
+            <div><a href="#/" onclick="BLNavClick('#sec-about');">About</a></div>
+            <div><a href="#/" onclick="BLNavClick('#sec-skills');">Skills</a></div>
+            <div><a href="#/" onclick="BLNavClick('#sec-work');">Work</a></div>
         </div>
-        <div id="nav-main-top-ham">Ham</div>
+        <div id="nav-main-top-ham" class="ham-open"></div>
     </nav>
     <main>
         <section id="sec-about">
