@@ -190,8 +190,6 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    position: relative;
-    top: var(--navHei);
 }
 
 main > section{
@@ -269,8 +267,10 @@ main > section{
     column-gap: 5%;
     row-gap: 10px;
 }
-.card-work{
-    border: solid 1px green;
+.flex-layout-list{
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
 }
 
 @media screen and (max-width: 400px) {
@@ -298,6 +298,63 @@ main > section{
     padding: 10px 0;
 }
 
+.card-work{
+    min-height: 200px;
+    gap: 20px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+    .card-work{
+        grid-template-columns: 100%;
+    }
+    .card-work > div:nth-child(2) {
+        width: 1fr;
+    }
+}
+@media screen and (min-width: 801px) {
+    .card-work{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-work > header{
+        grid-column: span 2;
+    }
+}
+
+.card-work > div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+.card-work > div:nth-child(2) {
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+}
+.card-work > header{
+    font-size: 1.8rem;
+    color: var(--fontColHighlight2);
+    text-align: left;
+}
+
+.card-work .links{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.code-boxes > div{
+    display: inline-block;
+    padding: 10px;
+    border: solid 1px var(--fontColHighlight1);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
 
 .hover-expand{
     transform: scale(1);
@@ -306,8 +363,6 @@ main > section{
 .hover-expand:hover{
     transform: scale(1.2);
 }
-
-
 
 @keyframes cursor-blink {
     0% {
