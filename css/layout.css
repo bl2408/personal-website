@@ -42,6 +42,18 @@ html, body{
     background-color: var(--bgMain);
 }
 
+ul {
+    list-style: none;
+}
+ul > li:before{
+    content: "\25AA"; 
+    color: var(--fontColHighlight2);
+    opacity: 0.5;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em
+}
+
 #overlay{
     position: fixed;
     z-index: 2;
@@ -53,6 +65,7 @@ html, body{
     transition: all 0.2s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    pointer-events:none;
 }
 #edge-fades{
     position: fixed;
@@ -62,6 +75,7 @@ html, body{
     width: 120vw;
     height: calc(100vh - var(--navHei));
     box-shadow: inset 0 0 50px 40px var(--bgNav);
+    pointer-events:none;
 }
 
 #nav-main-top-logo{
@@ -182,15 +196,16 @@ main{
 
 main > section{
     scroll-margin-top: var(--navHei);
-    height:calc(100vh - 80px);
-    min-height: 400px;
+    min-height:400px;
     width: 100%;
     max-width: 1200px;
     font-size: var(--baseFontSize);
     color: var(--fontColMain);
 }
 
+
 #sec-about{
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,14 +231,80 @@ main > section{
     #sec-about > div:last-child > div{
         display: inline;
     }
+    .grid-col2{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .grid-col2 > :first-child{
+        text-align: center;
+        margin-bottom: 30px;
+    }
 }
 @media screen and (min-width: 601px) {
     #sec-about > div:last-child{
         max-width: 80%;
     }
+    .grid-col2{
+        grid-template-columns: 1fr 4fr;
+    }
 }
 #sec-about > div:last-child{
     font-size: 1.8rem;
+}
+
+#sec-skills, #sec-work{
+    padding-top: var(--navHei);
+}
+
+.grid-col2 {
+    display: grid;
+    gap: 10px;
+}
+.grid-col2 > :first-child{
+    opacity: 0.3;
+}
+
+.grid-col4 {
+    display: grid;
+    column-gap: 5%;
+    row-gap: 10px;
+}
+.card-work{
+    border: solid 1px green;
+}
+
+@media screen and (max-width: 400px) {
+    .grid-col4{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 401px) and (max-width:1000px) {
+    .grid-col4{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items:auto;
+    }
+}
+@media screen and (min-width: 1001px) {
+    .grid-col4{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.card-skills > header{
+    font-size: 1.8rem;
+}
+.card-skills li {
+    padding: 10px 0;
+}
+
+
+.hover-expand{
+    transform: scale(1);
+    transition: transform 0.8s ease-in-out;
+}
+.hover-expand:hover{
+    transform: scale(1.2);
 }
 
 
