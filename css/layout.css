@@ -74,7 +74,8 @@ ul > li:before{
     left: -50vw;
     width: 200vw;
     height: calc(100vh - var(--navHei));
-    box-shadow: inset 0 0 50px 40px var(--bgNav);
+    box-shadow: inset 0 0 30px 20px var(--bgNav);
+    /* box-shadow: inset 0 0 50px 40px var(--bgNav); */
     pointer-events:none;
 }
 
@@ -329,13 +330,36 @@ main > section{
     justify-content: space-between;
     gap: 30px;
 }
-.card-work > div:nth-child(2) {
+
+/* IMG SECTION */
+.card-work:hover > .img-section{
+    opacity: 1;
+}
+
+.card-work > .img-section {
     min-height: 250px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.4;
+    transition: opacity 0.3s ease-in-out;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    cursor: pointer;
 }
+
+.img-button{
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    background-color: var(--bgMain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-work > header{
     font-size: 1.8rem;
     color: var(--fontColHighlight2);
@@ -423,5 +447,13 @@ footer header{
     content:"|";
     animation: cursor-blink 1s steps(2) infinite;
 }
+
+/* TODO
+
+- Add fades
+- fix link styles
+- adjust edge fades
+
+*/
 
 

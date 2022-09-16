@@ -6,6 +6,7 @@ const blNav = {
 };
 
 const BLNavToggle =(close=false)=>{
+    if(!blNav.navEl){ return ;}
     if(blNav.navEl.style.maxHeight || close===true){
         blNav.navEl.style.maxHeight = null;
         blNav.overlayEl.style.visibility = null;

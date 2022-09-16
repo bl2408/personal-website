@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/layout.css">
     <script src="./js/index.js"></script>
     <script src="./js/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="overlay"></div>
@@ -22,6 +23,7 @@
         <div id="nav-main-top-ham" class="ham-open"></div>
     </nav>
     <main>
+        <!-- ABOUT -->
         <section id="sec-about">
             <div>Hi, my name is</div>
             <div ><span class="blink-cursor">Brian Lambert.</span></div>
@@ -30,6 +32,8 @@
                     <span class="highlight2">Software Engineer</span>
                 </div>focused on creating beautiful and engaging web experiences. </div>
         </section>
+
+        <!-- SKILLS -->
         <section id="sec-skills">
             <div class="grid-col2">
                 <div>Skills</div>
@@ -73,6 +77,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- WORK -->
         <section id="sec-work">
             <div class="grid-col2">
                 <div>Work</div>
@@ -80,7 +86,7 @@
                     <!-- CARD1 -->
                     <div class="card-work">
                         <header>Absolute Enthusiasts</header>
-                        <div style="background-image: url('./images/work-aeclub.png');"></div>
+                        <div class="img-section" data-img='./images/work-aeclub.png'></div>
                         <div>
                             <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur, architecto iure ipsum sed sequi eos cupiditate incidunt laboriosam deserunt, sunt fugit fuga dicta, labore tempore quasi quas consectetur eligendi.</div>
                             <div class="links"><a href="https://www.aeclub.com.au" target="_blank">Visit</a></div>
@@ -96,7 +102,7 @@
                     <!-- CARD2 -->
                     <div class="card-work">
                         <header>Absolute Enthusiasts - Backend plugin</header>
-                        <div style="background-image: url('./images/work-aeclubbackend.png');"></div>
+                        <div class="img-section" data-img='./images/work-aeclubbackend.png'></div>
                         <div>
                             <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur, architecto iure ipsum sed sequi eos cupiditate incidunt laboriosam deserunt, sunt fugit fuga dicta, labore tempore quasi quas consectetur eligendi.</div>
                             <div class="links"></div>
@@ -113,7 +119,7 @@
                     <!-- CARD3 -->
                     <div class="card-work">
                         <header>Swoopy</header>
-                        <div style="background-image: url('./images/work-swoopy.png');"></div>
+                        <div class="img-section" data-img='./images/work-swoopy.png'></div>
                         <div>
                             <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur, architecto iure ipsum sed sequi eos cupiditate incidunt laboriosam deserunt, sunt fugit fuga dicta, labore tempore quasi quas consectetur eligendi.</div>
                             <div class="links">
@@ -132,7 +138,7 @@
                     <!-- CARD4 -->
                     <div class="card-work">
                         <header>Lateduck</header>
-                        <div style="background-image: url('./images/work-lateduck.png');"></div>
+                        <div class="img-section" data-img='./images/work-lateduck.png'></div>
                         <div>
                             <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consequatur, architecto iure ipsum sed sequi eos cupiditate incidunt laboriosam deserunt, sunt fugit fuga dicta, labore tempore quasi quas consectetur eligendi.</div>
                             <div class="links">
@@ -143,7 +149,6 @@
                                 <div>PHP</div>
                                 <div>CSS</div>
                                 <div>JAVASCRIPT</div>
-
                             </div>
                         </div>
                     </div>
@@ -153,6 +158,7 @@
             </div>
         </section>
     </main>
+    <!-- FOOTER -->
     <footer>
         <section>
             <header>Social</header>
