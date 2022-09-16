@@ -448,11 +448,19 @@ footer header{
     animation: cursor-blink 1s steps(2) infinite;
 }
 
+.fade-in{
+    opacity: 0;
+}
+
+.fade-set{
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
 /* TODO
 
 - Add fades
 - fix link styles
-- adjust edge fades
 
 */
 
