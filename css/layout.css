@@ -10,13 +10,6 @@
     --baseFontSize: 1.6rem;
 }
 
-.highlight1{
-    color: var(--fontColHighlight1);
-}
-.highlight2{
-    color: var(--fontColHighlight2);
-}
-
 @font-face {
     font-family: AnonPro-Bold;
      src: url(../fonts/AnonymousPro/AnonymousPro-Bold.ttf);
@@ -26,12 +19,14 @@
     font-family: AnonPro-Reg;
     src: url(../fonts/AnonymousPro/AnonymousPro-Regular.ttf);
 }
-/*
-@font-face {
-   font-family: OxygenMono;
-    src: url(../fonts/OxygenMono/OxygenMono-Regular.ttf);
+
+.highlight1{
+    color: var(--fontColHighlight1);
 }
-*/
+.highlight2{
+    color: var(--fontColHighlight2);
+}
+
 html, body{
     font-family: AnonPro-Reg;
     font-size: 67.5%;
@@ -52,6 +47,16 @@ ul > li:before{
     display: inline-block; 
     width: 1em;
     margin-left: -1em
+}
+
+a{
+    text-decoration: none;
+}
+a, a:active, a:visited {
+    color: var(--fontColHighlight2);
+}
+a:hover{
+    color: var(--fontColHighlight1);
 }
 
 #overlay{
@@ -75,7 +80,6 @@ ul > li:before{
     width: 200vw;
     height: calc(100vh - var(--navHei));
     box-shadow: inset 0 0 30px 20px var(--bgNav);
-    /* box-shadow: inset 0 0 50px 40px var(--bgNav); */
     pointer-events:none;
 }
 
@@ -127,11 +131,11 @@ ul > li:before{
 }
 
 #nav-main-top a{
-    text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
-#nav-main-top a:active, #nav-main-top a:visited{
-    color: var(--fontColHighlight2);
+
+.nav-special{
+    border: solid 1px green;
 }
 
 .ham-open{
@@ -230,6 +234,21 @@ main > section{
     #sec-about > div:last-child > div{
         display: inline;
     }
+}
+@media screen and (min-width: 601px) {
+    #sec-about > div:last-child{
+        max-width: 80%;
+    }
+}
+#sec-about > div:last-child{
+    font-size: 1.8rem;
+}
+
+#sec-skills, #sec-work{
+    padding-top: var(--navHei);
+}
+
+@media screen and (max-width: 900px) {
     .grid-col2{
         grid-template-columns: 1fr;
         justify-items: center;
@@ -239,20 +258,10 @@ main > section{
         margin-bottom: 30px;
     }
 }
-@media screen and (min-width: 601px) {
-    #sec-about > div:last-child{
-        max-width: 80%;
-    }
+@media screen and (min-width: 901px) {
     .grid-col2{
         grid-template-columns: 1fr 4fr;
     }
-}
-#sec-about > div:last-child{
-    font-size: 1.8rem;
-}
-
-#sec-skills, #sec-work{
-    padding-top: var(--navHei);
 }
 
 .grid-col2 {
@@ -407,6 +416,17 @@ footer header{
     color: var(--fontColHighlight1);
 }
 
+footer a, footer a:active, footer a:visited{
+    color: var(--fontColMain);
+    text-decoration: underline;
+    display: inline-block;
+    padding: 5px;
+}
+
+footer a:hover{
+    color: var(--fontColHighlight1);
+}
+
 @media screen and (max-width: 600px) {
     footer{
         flex-direction: column;
@@ -457,11 +477,5 @@ footer header{
     opacity: 1;
 }
 
-/* TODO
-
-- Add fades
-- fix link styles
-
-*/
 
 
