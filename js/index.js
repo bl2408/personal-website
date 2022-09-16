@@ -4,21 +4,19 @@ const BLScroll =(el)=>{
 };
 
 const BLFadeIns=()=>{
-    if(!fadeInsList || fadeInsList.length <= 0){ return; }
-
+    
+    const fadeInsList = document.querySelectorAll(".fade-in");
     const windowCenterPoint = Math.floor((window.innerHeight / 2) + window.pageYOffset);
 
     fadeInsList.forEach(fI =>{
         if(fI.offsetTop <= windowCenterPoint){
             fI.classList.add('fade-set');
             fI.classList.remove('fade-in');
+
         }
     });
+    
 };
-
-//fade-in list
-let fadeInsList;
-const fadeInPad = 20;
 
 window.addEventListener("load", ()=>{
     //add background images and button icons to .card-work sections
@@ -34,7 +32,6 @@ window.addEventListener("load", ()=>{
         }
     });
 
-    fadeInsList = [...document.querySelectorAll(".fade-in")];
     BLFadeIns();
 });
 
